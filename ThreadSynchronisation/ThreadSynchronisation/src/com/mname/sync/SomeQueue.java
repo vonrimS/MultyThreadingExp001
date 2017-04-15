@@ -3,7 +3,7 @@ package com.mname.sync;
 public class SomeQueue {
 
 	int stuffCount;
-	boolean valueSet = false;// флаг для передачи очереди
+	boolean valueSet = false;// флаг передачи очереди
 
 	synchronized int get() {
 		while (!valueSet) {
