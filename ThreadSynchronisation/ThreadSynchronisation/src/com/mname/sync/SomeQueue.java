@@ -2,10 +2,11 @@ package com.mname.sync;
 
 public class SomeQueue {
 
-	int stuffCount;// счетчик передачи
-	boolean valueSet = false;// флаг передачи очереди
+	int stuffCount;
+	boolean valueSet = false;
 
 	synchronized int get() {
+
 		while (!valueSet) {
 			try {
 				wait();
