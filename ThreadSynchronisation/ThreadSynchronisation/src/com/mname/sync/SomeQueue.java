@@ -2,7 +2,7 @@ package com.mname.sync;
 
 public class SomeQueue {
 
-	int stuffCount;
+	int stuffCount;// счетчик передачи
 	boolean valueSet = false;// флаг передачи очереди
 
 	synchronized int get() {
