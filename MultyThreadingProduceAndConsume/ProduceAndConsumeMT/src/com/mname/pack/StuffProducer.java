@@ -12,7 +12,8 @@ public class StuffProducer implements Runnable {
 	@Override
 	public void run() {
 		int i = 0;
-		while (true) {
+		// ограничить передачу до обозреваемого значения
+		while (true && q.numToDeliver < 20) {
 			q.put(i++);
 		}
 	}

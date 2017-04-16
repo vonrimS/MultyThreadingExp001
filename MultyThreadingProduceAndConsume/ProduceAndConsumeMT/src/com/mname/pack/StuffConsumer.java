@@ -11,7 +11,8 @@ public class StuffConsumer implements Runnable {
 
 	@Override
 	public void run() {
-		while (true) {
+		// ограничить потребление до обозреваемог значения
+		while (true && q.numToDeliver < 20) {
 			q.get();
 		}
 
